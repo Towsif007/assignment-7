@@ -33,6 +33,7 @@ const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
 
+  // Call Update Total 
   updateTotal();
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
