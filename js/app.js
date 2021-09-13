@@ -32,9 +32,9 @@ const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
 
-  // Call Update Total 
-  updateTotal();
+  // Call Update Total
   updateTaxAndCharge();
+  updateTotal();
   document.getElementById("total-Products").innerText = count;
 };
 
@@ -75,11 +75,11 @@ const updateTaxAndCharge = () => {
     setInnerText("total-tax", priceConverted * 0.4);
   }
 };
-
 //grandTotal update function
 const updateTotal = () => {
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal.toFixed(2);
+  
 };
